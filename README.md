@@ -39,11 +39,11 @@ List of available commands:
   directory 'dir' will be generated within the specified path.
     * path: Name of the new directory.
   * `cd <path>`: Moves the user into directory 'path'.
-    * path: Name of the route where the user wants to move into.
+    * path: Name of the path where the user wants to move into.
   * `exit`: Terminate the program.
 
 #### Special commands
-  * `MAKEITGOOD`: Enables a mode were the Shell prints out with randomly coloured text. In order to disable this, simply
+  * `MAKEITGOOD`: Enables a mode where the Shell prints out with randomly coloured text. In order to disable this, simply
   run this command for a second time.
-  * `JOKER`: Enables a mode were the Shell prints out with randomly coloured background. In order to disable this,
+  * `JOKER`: Enables a mode where the Shell prints out with randomly coloured background. In order to disable this,
   simply run this command for a second time.
