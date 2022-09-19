@@ -1,0 +1,76 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+// Shell (Generic)
+//
+// Desc: main.h
+// Main program code header.
+//
+// 17/04/2022 (José Benavente)
+// File inception.
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#include <ctype.h>
+#include <dirent.h>
+#include <errno.h>
+#include <sys/types.h>
+#include <sys/sysinfo.h>
+#include <sys/stat.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <unistd.h>
+
+////////////////////////////////////////////////////////////////////////////////
+// Macros:
+////////////////////////////////////////////////////////////////////////////////
+
+#define CHDIR_CMD "cd"
+#define PWD_CMD "cwd"
+#define MAKEDIR_CMD "mkdir"
+#define LS_CMD "ls"
+#define EXIT_CMD "exit"
+#define TIME_CMD "seconds"
+#define SYSINFO_CMD "stats"
+#define MAKEITGOOD_CMD "MAKEITGOOD"
+#define JOKER_CMD "JOKER"
+#define CMD_SIZE 1024
+#define ARGS_SIZE 156
+#define CONTINUE 1
+
+////////////////////////////////////////////////////////////////////////////////
+// Types:
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+// Prototypes:
+////////////////////////////////////////////////////////////////////////////////
+
+int main(void);
+void cwd(void);
+void seconds(void);
+void stats(void);
+void cd(char *path);
+void makedir(char *path);
+void listdir(void);
+void prompt(void);
+void parse(void);
+int eval(void);
+int randomInRange(int min, int max);
+void resetColor(void);
+void randomColor(void);
+void randomBackgroundColor(void);
+
+////////////////////////////////////////////////////////////////////////////////
+// Globals:
+////////////////////////////////////////////////////////////////////////////////
+
+char command[CMD_SIZE];
+char *args[ARGS_SIZE];
+char lastKnownDirectory[256];
+bool MAKEITGOOD;
+bool JOKER;
+char *welcomeMsg;
